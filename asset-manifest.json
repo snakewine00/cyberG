@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cyberG/static/css/main.818ac8e9.css",
+    "main.css": "/cyberG/static/css/main.6cef4040.css",
     "main.js": "/cyberG/static/js/main.a704e464.js",
     "index.html": "/cyberG/index.html",
-    "main.818ac8e9.css.map": "/cyberG/static/css/main.818ac8e9.css.map",
+    "main.6cef4040.css.map": "/cyberG/static/css/main.6cef4040.css.map",
     "main.a704e464.js.map": "/cyberG/static/js/main.a704e464.js.map"
   },
   "entrypoints": [
-    "static/css/main.818ac8e9.css",
+    "static/css/main.6cef4040.css",
     "static/js/main.a704e464.js"
   ]
 }
