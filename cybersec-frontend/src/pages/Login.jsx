@@ -1,22 +1,45 @@
-// /src/pages/Login.jsx
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import axios from 'axios';
 
-export default function Login() {
+function Login() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:3001/auth/login', {
+        username,
+        password,
+      });
+      setMessage(res.data.message);
+    } catch (err) {
+      setMessage(err.response?.data?.error || 'Login failed');
+    }
+  };
+
   return (
-    <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.4 }} className="container pt-5 mt-5">
-      <h2 className="text-center text-info mb-4">Login</h2>
-      <form className="mx-auto" style={{ maxWidth: "400px" }}>
-        <div className="form-group mb-3">
-          <label>Email</label>
-          <input type="email" className="form-control" required />
-        </div>
-        <div className="form-group mb-3">
-          <label>Password</label>
-          <input type="password" className="form-control" required />
-        </div>
-        <button type="submit" className="btn btn-info w-100">Login</button>
-      </form>
-    </motion.div>
+    <form onSubmit={handleLogin} style={{ maxWidth: 400, margin: '2rem auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <h2>Login</h2>
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={e => setUsername(e.target.value)}
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+        required
+      />
+      <button type="submit">Login</button>
+      {message && <div>{message}</div>}
+    </form>
   );
 }
+
+export default Login; 

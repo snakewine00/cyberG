@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 export default function Dashboard() {
   return (
     <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="container pt-5 mt-5 bg-gradient text-light rounded p-4">
-      <h2 className="text-center text-warning mb-4">User Dashboard</h2>
+      <h2 className="text-center neon-text mb-4">User Dashboard</h2>
+
         <div className="row">
       <div className="col-md-4">
           <div className="card border-info mb-4">

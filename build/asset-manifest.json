@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cyberG/static/css/main.7259920a.css",
+    "main.js": "/cyberG/static/js/main.a704e464.js",
+    "index.html": "/cyberG/index.html",
+    "main.7259920a.css.map": "/cyberG/static/css/main.7259920a.css.map",
+    "main.a704e464.js.map": "/cyberG/static/js/main.a704e464.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7259920a.css",
+    "static/js/main.a704e464.js"
+  ]
+}
